@@ -1,6 +1,4 @@
 #!/usr/env/bin python3
-import random
-
 
 def est_multiple_de(n):
     continuer_partie = True
