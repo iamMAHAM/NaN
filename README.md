@@ -7,3 +7,4 @@ Répository des exercices et correction des étudiants de NaN digital academy
 - [multiply](/multiply)
 - [mystery](/mystery)
 - [multiplication](/multiplication/)
+- [filtering](/filtering/)
