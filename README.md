@@ -10,3 +10,4 @@ Répository des exercices et correction des étudiants de NaN digital academy
 - [filtering](/filtering/)
 - [immatriculation](/immatriculation/)
 - [arithmetique](/arithmetique/)
+- [snake-case](/snake_case)

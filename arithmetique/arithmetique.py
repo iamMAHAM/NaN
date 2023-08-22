@@ -1,4 +1,4 @@
-#!/usr/env/bin python3
+#!/usr/bin/env python3
 
 def evaluer(chaine):
     if type(chaine) is str:
