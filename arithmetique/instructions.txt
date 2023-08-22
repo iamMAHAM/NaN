@@ -1,0 +1,22 @@
+FONCTION EVALUER(CHAINE)
+    POUR CARACTERE DE CHAINE
+        SI CARACTERE EST ESPACE
+            PREMIERE_PARTIE EGAL INDICE(DEBUT CHAINE) À INDICE(ESPACE)
+            DEUXIEME_PARTIE  INDICE(ESPACE) + 1
+            TROISIEME_PARTIE INDICE(ESPACE) + 3 À INDICE(FIN CHAINE)
+            SORTIR DE LA BOUCLE
+        
+        SI PREMIERE_PARTIE EST ENTIER ET TROISIEME_PARTIE ENTIER ET DEUXIEME_PARTIE EST OPERATEUR
+            SI OPERATEUR EGAL "+"
+                RETOURNE PREMIERE_PARTIE + TROISIEME_PARTIE -> 1 chiffre après la virgule
+            
+            SI OPERATEUR EGAL "-"
+                RETOURNE PREMIERE_PARTIE - TROISIEME_PARTIE -> 1 chiffre après la virgule
+            
+            SI OPERATEUR EGAL "*"
+                RETOURNE PREMIERE_PARTIE * TROISIEME_PARTIE -> 1 chiffre après la virgule
+            
+            SI OPERATEUR EGAL "/"
+                RETOURNE PREMIERE_PARTIE / TROISIEME_PARTIE -> 1 chiffre après la virgule
+
+        RETOURNE "EXPRESSION VALIDE"
