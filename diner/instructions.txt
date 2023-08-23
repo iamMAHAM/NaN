@@ -1,0 +1,30 @@
+FONCTION HEURE_REPAS(CHAINE)
+    SI TYPE CHAINE EST STR
+       DIVISION EGAL DIVISER CHAINE PAR LE SEPARATEUR ':' 
+       SI TAILLE(DIVISION) EGAL 2
+            SI HEURE EST ENTIER ET APPARTIENT À [1, 24] AND MINUTES ENTIER ET APPARTIENT[0, 59]
+                MESSAGE EGAL CHAINE VIDE
+                SI HEURE € [7, 8]
+                    MESSAGE <- "petit-déjeuner"
+                
+                SI HEURE € [12, 13]
+                    MESSAGE <- "déjeuner"
+
+                SI HEURE € [18, 19]
+                    MESSAGE <- "diner"
+
+                SINON
+                    MESSAGE <- "repas non définie"
+
+                FONCTION CONVERT():
+                    VALEUR <- HH + (MINUTES * 0.5 ) / 30
+
+                
+                RETOURNE [MESSAGE, CONVERT()]
+
+        RETOURNE "repas non définie"
+
+
+
+
+            

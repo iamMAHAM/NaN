@@ -11,3 +11,4 @@ Répository des exercices et correction des étudiants de NaN digital academy
 - [immatriculation](/immatriculation/)
 - [arithmetique](/arithmetique/)
 - [snake-case](/snake_case)
+- [diner](/diner/)
