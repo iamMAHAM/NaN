@@ -12,3 +12,4 @@ Répository des exercices et correction des étudiants de NaN digital academy
 - [arithmetique](/arithmetique/)
 - [snake-case](/snake_case)
 - [diner](/diner/)
+- [minmaxnumber](/min_max_number)
