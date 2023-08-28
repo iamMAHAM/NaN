@@ -14,3 +14,4 @@ Répository des exercices et correction des étudiants de NaN digital academy
 - [diner](/diner/)
 - [minmaxnumber](/min_max_number)
 - [loginregister](/login_register)
+- [quizzes](/quizzes)
