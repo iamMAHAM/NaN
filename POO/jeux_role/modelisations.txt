@@ -1,0 +1,19 @@
+JOUEUR
+    // attributs
+   - nom
+   - points de vie
+   - points d'attques
+   - arme
+   - armure
+
+
+   // methods
+   - attaquer
+   - mourrir
+
+ARME
+    - nom
+    - degat
+    - duree de vie
+
+
