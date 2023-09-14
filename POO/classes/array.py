@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 class Array:
     def __init__(self, *args):
         self.tableau = list(args)
@@ -54,6 +53,17 @@ class Array:
                 return False
 
         return True
+
+    def flat(self, profondeur):
+        def getLevel(tab):
+            count = 1
+            for element in tab:
+                while self.some(lambda v: isinstance(v, list)):
+                    pass
+
+        array = Array()
+        for element in self.iterate():
+            pass
 
     def fill(self, valeur, debut=0, fin=None):
 
@@ -163,19 +173,52 @@ class Array:
 
     def pop(self):
         dernier = self.iterate()[self.length() - 1]
-        self.tableau = self.tableau[0:self.length() - 1]
+        self.tableau = self.tableau[:self.length() - 1]
         return dernier
 
     def push(self, *args):
         for arg in args:
-            self.tableau[:self.length()] = [arg]
+            self.tableau[self.length():] = [arg]
 
         return self.length()
+
+    def reduce(self, fonction, valeurInitiale):
+        pass
+
+    def reverse(self):
+        self.tableau = self.toReversed()
+        return self
+
+    def shift(self):
+        premier_element = self.tableau[0]
+        self.tableau = self.tableau[1:]
+        return premier_element
+
+    def slice(self, debut=0, fin=None):
+        array = Array()
+        if not fin:
+            fin = self.length()
+
+        if debut >= fin:
+            raise ValueError(
+                'la valeur initiale ne peut être supérieur à la taille du tableau')
+
+        for i in range(debut, fin):
+            array.push(self.tableau[i])
+
+        return array
+
+    def some(self, fonction):
+        for element in self.iterate():
+            if (fonction(element)):
+                return True
+
+        return False
 
 
 array = Array(2, 4, 9, 7, 8, 4, 7, 2)
 array2 = Array(5, 5, 7)
 array3 = Array("yakasport", "diallogage", "dedy")
+array3.push('salut', 'comment', 'tu', 'vas')
 
-print(array3.pop())
-print(array3)
+print(array3.some(lambda value: value == 'tdsu'))

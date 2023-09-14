@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -32,10 +34,11 @@ def main():
 
         soupDetail = parseHTML(getHTML(lien))
 
-        description = soupDetail.select_one('markup.-mhm.-pvl')
-        print(description)
+        description = list(map(lambda p: p.text,  soupDetail.select_one(
+            '.markup.-mhm.-pvl').select('p')))
 
-        articles.append({"titre": titre, "price": price, "image": image})
+        articles.append({"titre": titre, "price": price,
+                        "image": image, "description": description})
 
     print(articles)
 
