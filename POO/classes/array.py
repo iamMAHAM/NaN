@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import math
+
 
 class Array:
     def __init__(self, *args):
@@ -54,16 +56,19 @@ class Array:
 
         return True
 
-    def flat(self, profondeur):
-        def getLevel(tab):
-            count = 1
-            for element in tab:
-                while self.some(lambda v: isinstance(v, list)):
-                    pass
+    def flat(self, profondeur=1):
+        resultat = Array()
 
-        array = Array()
-        for element in self.iterate():
-            pass
+        def rec(arr, profondeur):
+            for element in arr:
+                if (isinstance(element, list)) and profondeur:
+                    rec(element, profondeur - 1)
+                else:
+                    resultat.push(element)
+
+            return resultat
+
+        return rec(self.tableau, profondeur)
 
     def fill(self, valeur, debut=0, fin=None):
 
@@ -183,7 +188,12 @@ class Array:
         return self.length()
 
     def reduce(self, fonction, valeurInitiale):
-        pass
+        accumulteur = valeurInitiale
+
+        for element in self.iterate():
+            accumulteur = fonction(accumulteur,  element)
+
+        return accumulteur
 
     def reverse(self):
         self.tableau = self.toReversed()
@@ -219,6 +229,4 @@ class Array:
 array = Array(2, 4, 9, 7, 8, 4, 7, 2)
 array2 = Array(5, 5, 7)
 array3 = Array("yakasport", "diallogage", "dedy")
-array3.push('salut', 'comment', 'tu', 'vas')
-
-print(array3.some(lambda value: value == 'tdsu'))
+array4 = Array(0, 1, [2, [3, [4, 5]]])
