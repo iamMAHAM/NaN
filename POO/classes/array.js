@@ -26,7 +26,7 @@ class Tableau {
     console.log(tabs);
     const concatene = new Tableau();
     for (const tab of tabs) {
-      if (!tab instanceof Tableau) {
+      if (!(tab instanceof Tableau)) {
         throw new TypeError(
           `Le paramètre ${tab} n'est pas une instance de Tableau`
         );
